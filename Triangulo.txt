@@ -1,0 +1,30 @@
+public void DibujarTrianguloImpar()
+{
+    Console.WriteLine("Programa que dibuja un triangulo");
+    Console.WriteLine();
+    Console.Write("Di un número de altura de triangulo, tiene que ser impar: ");
+    int altura = Convert.ToInt16(Console.ReadLine());
+    Console.WriteLine();
+    int espacios = altura - 1;
+    int asteriscos = 1;
+
+    for (int i = 0; i < altura; i++)
+    {
+        //Bucle que pone espacios en blanco hasta llegar a la posición en la que se tiene que imprimir el primer asterisco.
+        for (int j = 0; j < espacios; j++)
+        {
+            Console.Write(" ");
+        }
+
+        //bucle que imprime asteriscos hasta llegar a la cantidad de asteriscos calculada.
+        for (int j = 0; j < asteriscos; j++)
+        {
+            Console.Write("*");
+        }
+
+        Console.WriteLine();
+        espacios--;
+        asteriscos += 2;
+    }
+    Console.ReadKey();
+}
